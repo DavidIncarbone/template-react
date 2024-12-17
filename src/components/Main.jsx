@@ -1,7 +1,11 @@
 function Main() {
-    <main>
+    return (
+        <main>
+            <p>prova</p>
 
-    </main>
+        </main>
+    )
 }
+
 
 export default Main;

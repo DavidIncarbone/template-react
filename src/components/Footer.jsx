@@ -1,7 +1,12 @@
 function Footer() {
-    <footer>
+    return (
 
-    </footer>
+        <footer>
+            <p>prova</p>
+
+        </footer>
+    )
+
 }
 
 export default Footer;
