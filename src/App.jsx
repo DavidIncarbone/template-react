@@ -1,21 +1,24 @@
-import { useState } from 'react'
-import './App.css'
-import Header from "./components/Header";
-import Main from "./components/Main";
-import Footer from "./components/Footer";
+
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import DefaultLayout from "./layouts/DefaultLayout"
+import HomePage from "./pages/HomePage"
+import NotFound from "./pages/NotFound"
+import { GlobalProvider } from "./contexts/GlobalContext"
 
 function App() {
 
-
   return (
-    <>
 
-      <Header />
-      <Main />
-      <Footer />
-
-
-    </>
+    <BrowserRouter>
+      <GlobalProvider>
+        <Routes>
+          <Route Component={DefaultLayout} >
+            <Route index Component={HomePage} />
+            <Route path="*" Component={NotFound} />
+          </Route>
+        </Routes>
+      </GlobalProvider>
+    </BrowserRouter>
 
   )
 }
